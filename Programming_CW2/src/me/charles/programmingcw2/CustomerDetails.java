@@ -8,7 +8,7 @@ import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
 public abstract class CustomerDetails {
 	private final String customerID;
 	private Address address;
-	private final String regionalCode;
+	private String regionalCode;
 	private double totalFullPriceValue;
 	private static final List<String> validRegionCodes = Arrays.asList(new String[] { "SC", "WA", "NI", "NE", "NW", "MI", "EA", "SE", "SW", "GL" });
 
@@ -43,15 +43,31 @@ public abstract class CustomerDetails {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+	
+	public void setRegionalCode(String regionalCode) {
+		this.regionalCode = regionalCode;
+	}
 
+	/**
+	 * Resets the total full price value for the past 12 months
+	 */
 	public void resetTotalFullPriceValue() {
 		this.totalFullPriceValue = 0;
 	}
 
+	/**
+	 * Sets the total full price value for the past 12 months
+	 * 
+	 * @param totalFullPriceValue
+	 *            The new total full price value
+	 */
 	public void setTotalFullPriceValue(double totalFullPriceValue) {
 		this.totalFullPriceValue = totalFullPriceValue;
 	}
 
+	/**
+	 * @return The calculated discount for this customer
+	 */
 	public abstract int getDiscount();
 
 	@Override

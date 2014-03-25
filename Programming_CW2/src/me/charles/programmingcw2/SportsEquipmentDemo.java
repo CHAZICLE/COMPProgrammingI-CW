@@ -10,7 +10,7 @@ import me.charles.programmingcw2.exceptions.IncorrectPurchaseOrderException;
 public class SportsEquipmentDemo {
 	public static void main(String[] args) {
 		// Part I
-		LinkedList<Product> tempProducts = new LinkedList<Product>();
+		LinkedList<Product> tempProducts = new LinkedList<>();
 		try (InputFileData fir = new InputFileData("productData.txt")) {
 			try {
 				int count = Integer.parseInt(fir.next());

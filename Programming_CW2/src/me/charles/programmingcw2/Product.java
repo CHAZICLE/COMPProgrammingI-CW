@@ -4,8 +4,9 @@ import me.charles.programmingcw2.exceptions.InvalidProductCodeException;
 
 /**
  * A class to model a product
+ * 
  * @author charles
- *
+ * 
  */
 public class Product {
 	private final String productCode;
@@ -25,8 +26,8 @@ public class Product {
 	public double getPricePerUnit() {
 		return pricePerUnit;
 	}
-
-	public void setPricePerUnit(int pricePerUnit) {
+	
+	public void setPricePerUnit(double pricePerUnit) {
 		this.pricePerUnit = pricePerUnit;
 	}
 

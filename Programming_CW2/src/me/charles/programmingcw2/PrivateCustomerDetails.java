@@ -17,10 +17,17 @@ public class PrivateCustomerDetails extends CustomerDetails {
 		return name;
 	}
 
+	public void setName(Name name) {
+		this.name = name;
+	}
+
 	public static int getCompanyDiscountValue() {
 		return COMPANY_SPECIFIED_DISCOUNT_VALUE;
 	}
 
+	/**
+	 * Calculates the discount for a private customer
+	 */
 	@Override
 	public int getDiscount() {
 		if (getTotalFullPriceValue() >= COMPANY_SPECIFIED_DISCOUNT_VALUE)

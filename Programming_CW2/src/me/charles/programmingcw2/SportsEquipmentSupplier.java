@@ -91,7 +91,10 @@ public class SportsEquipmentSupplier {
 		purchaseHistory[currentMonth] = purchaseHistory[0];
 		currentMonth++;
 		if (currentMonth >= 13)
+		{
 			currentMonth = 1;
+			currentYear++;
+		}
 		// Reuse existing list to save memory
 		if (tmp != null)
 			tmp.clear();

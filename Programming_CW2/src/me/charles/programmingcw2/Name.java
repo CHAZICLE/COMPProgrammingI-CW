@@ -6,9 +6,9 @@ package me.charles.programmingcw2;
  * @author charles
  */
 public class Name {
-	private String title;
-	private String initials;
-	private String surname;
+	private final String title;
+	private final String initials;
+	private final String surname;
 
 	public Name(String title, String initials, String sirname) {
 		this.title = title;
@@ -26,18 +26,6 @@ public class Name {
 
 	public String getSurname() {
 		return surname;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public void setInitials(String initials) {
-		this.initials = initials;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
 	}
 
 	@Override

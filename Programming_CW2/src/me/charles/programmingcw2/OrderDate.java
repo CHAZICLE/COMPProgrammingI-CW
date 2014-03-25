@@ -3,6 +3,7 @@ package me.charles.programmingcw2;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import me.charles.programmingcw2.exceptions.IllegalDateFormatException;
 
@@ -36,6 +37,16 @@ public class OrderDate {
 
 	public String getDate() {
 		return date;
+	}
+	
+	public Date getDateObject()
+	{
+		try {
+			return dateFormat.parse(date);
+		} catch (ParseException e) {
+			// Shouldn't happen, validated in constructor
+			return null;
+		}
 	}
 
 	@Override

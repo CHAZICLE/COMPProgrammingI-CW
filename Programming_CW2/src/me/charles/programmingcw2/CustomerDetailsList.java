@@ -15,10 +15,18 @@ import me.charles.programmingcw2.exceptions.CustomerNotFoundException;
 public class CustomerDetailsList implements Iterable<CustomerDetails> {
 	private Map<String, CustomerDetails> detailsCache = new HashMap<String, CustomerDetails>();
 
+	/**
+	 * Adds a new customer to the list
+	 * 
+	 * @param customerDetails
+	 *            The customer to add
+	 */
 	public void add(CustomerDetails customerDetails) {
 		detailsCache.put(customerDetails.getCustomerID(), customerDetails);
 	}
-
+	/**
+	 * @return The number of customers in this list
+	 */
 	public int size() {
 		return detailsCache.size();
 	}

@@ -13,7 +13,7 @@ public class InputFileData implements Closeable, Iterable<String>, Iterator<Stri
 	public InputFileData(String filename) throws FileNotFoundException {
 		br = new BufferedReader(new FileReader(filename));
 	}
-	
+
 	@Override
 	public void close() {
 		try {
@@ -34,16 +34,16 @@ public class InputFileData implements Closeable, Iterable<String>, Iterator<Stri
 	public boolean hasNext() {
 		try {
 			buffer = br.readLine();
-			stored = true;
 		} catch (IOException e) {
+			stored = false;
 			return false;
 		}
-		return buffer != null;
+		return stored = (buffer != null);
 	}
 
 	@Override
 	public String next() {
-		if(!stored || buffer==null)
+		if (!stored || buffer == null)
 			hasNext();
 		stored = false;
 		return buffer;
@@ -51,8 +51,9 @@ public class InputFileData implements Closeable, Iterable<String>, Iterator<Stri
 
 	@Override
 	public void remove() {
-		// Stub!
+		throw new UnsupportedOperationException();
 	}
+
 	@Override
 	public String toString() {
 		return new StringBuilder().append("InputFileData(buffer=").append(buffer).append(stored ? ",awaiting recovery" : "previous line").append(")").toString();

@@ -38,7 +38,6 @@ public class PurchaseOrder {
 	}
 
 	public double getDiscountedPrice() {
-		// Percentage discount?
 		return (product.getPricePerUnit() * quantity * (100 - getCustomerDiscount())) / 100;
 	}
 

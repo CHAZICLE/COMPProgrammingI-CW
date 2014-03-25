@@ -1,6 +1,6 @@
 package me.charles.programmingcw2;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,7 +11,7 @@ import java.util.List;
  * 
  */
 public class PurchaseOrderList {
-	private List<PurchaseOrder> purchaseOrderList = new ArrayList<>();
+	private List<PurchaseOrder> purchaseOrderList = new LinkedList<>();
 
 	/**
 	 * @return an array containing all the purchase orders in this list, if this

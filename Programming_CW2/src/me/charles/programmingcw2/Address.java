@@ -9,11 +9,23 @@ public class Address {
 	private final String street;
 	private final String city;
 	private final String postcode;
-
+	/**
+	 * Creates an immutable address
+	 */
 	public Address(String street, String city, String postcode) {
 		this.street = street;
 		this.city = city;
 		this.postcode = postcode;
+	}
+	/**
+	 * Creates an address copying fields from a given one
+	 * @param other The address to duplicate
+	 */
+	public Address(Address other)
+	{
+		this.street = other.street;
+		this.city = other.city;
+		this.postcode = other.postcode;
 	}
 
 	public String getStreet() {
