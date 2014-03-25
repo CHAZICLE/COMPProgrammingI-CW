@@ -3,6 +3,10 @@ package me.charles.programmingcw2;
 import java.util.HashMap;
 import java.util.Map;
 
+import me.charles.programmingcw2.exceptions.CustomerNotFoundException;
+import me.charles.programmingcw2.exceptions.IllegalDateFormatException;
+import me.charles.programmingcw2.exceptions.IncorrectPurchaseOrderException;
+
 public class SportsEquipmentSupplier {
 	private int currentMonth;
 	private int currentYear;

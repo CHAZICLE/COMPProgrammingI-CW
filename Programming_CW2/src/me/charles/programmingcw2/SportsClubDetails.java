@@ -1,5 +1,7 @@
 package me.charles.programmingcw2;
 
+import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
+
 /**
  * A class to represent a sports club, holding its details
  * 

@@ -1,5 +1,7 @@
 package me.charles.programmingcw2;
 
+import me.charles.programmingcw2.exceptions.InvalidProductCodeException;
+
 /**
  * A class to model a product
  * @author charles

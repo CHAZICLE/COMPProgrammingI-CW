@@ -1,4 +1,4 @@
-package me.charles.programmingcw2;
+package me.charles.programmingcw2.exceptions;
 
 public class InvalidProductCodeException extends Exception {
 	private static final long serialVersionUID = -1360451214978397103L;

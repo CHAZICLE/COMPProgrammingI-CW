@@ -1,5 +1,7 @@
 package me.charles.programmingcw2;
 
+import me.charles.programmingcw2.exceptions.IllegalDateFormatException;
+
 public class PurchaseOrder {
 	private final OrderDate orderDate;
 	private final String customerID;

@@ -1,4 +1,4 @@
-package me.charles.programmingcw2;
+package me.charles.programmingcw2.exceptions;
 
 public class IllegalCustomerIDException extends Exception{
 	private static final long serialVersionUID = 5428038101347380486L;

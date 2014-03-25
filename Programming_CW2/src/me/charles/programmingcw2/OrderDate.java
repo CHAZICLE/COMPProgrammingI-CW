@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import me.charles.programmingcw2.exceptions.IllegalDateFormatException;
+
 /**
  * A class to represent a date that an order was made
  * 

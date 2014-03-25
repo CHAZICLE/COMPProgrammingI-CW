@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import me.charles.programmingcw2.exceptions.CustomerNotFoundException;
+
 /**
  * A class to hold the customer details
  * 

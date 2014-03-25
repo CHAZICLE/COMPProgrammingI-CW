@@ -3,6 +3,10 @@ package me.charles.programmingcw2;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
+import me.charles.programmingcw2.exceptions.CustomerNotFoundException;
+import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
+import me.charles.programmingcw2.exceptions.IncorrectPurchaseOrderException;
+
 public class SportsEquipmentDemo {
 	public static void main(String[] args) {
 		// Part I

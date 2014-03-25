@@ -1,5 +1,7 @@
 package me.charles.programmingcw2;
 
+import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
+
 public class PrivateCustomerDetails extends CustomerDetails {
 	private Name name;
 	private static final int COMPANY_SPECIFIED_DISCOUNT_VALUE = 100;

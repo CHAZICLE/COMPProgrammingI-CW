@@ -3,6 +3,8 @@ package me.charles.programmingcw2;
 import java.util.Arrays;
 import java.util.List;
 
+import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
+
 public abstract class CustomerDetails {
 	private final String customerID;
 	private Address address;
