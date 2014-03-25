@@ -24,26 +24,52 @@ public class SportsEquipmentSupplier {
 		purchaseHistory = new PurchaseOrderList[13];
 	}
 
+	/**
+	 * @return The current month index from 1 to 12 (inclusive)
+	 */
 	public int getCurrentMonth() {
 		return currentMonth;
 	}
 
+	/**
+	 * @return The current year number
+	 */
 	public int getCurrentYear() {
 		return currentYear;
 	}
 
+	/**
+	 * @return The products offered by this sports equipment supplier
+	 */
 	public Product[] getProductsRange() {
 		return (Product[]) productsRange.values().toArray();
 	}
 
+	/**
+	 * @return The list of customer details
+	 */
 	public CustomerDetailsList getCustomerDetailsList() {
 		return customerDetailsList;
 	}
 
+	/**
+	 * Gets the purchase history for the current month and the previous 12
+	 * months. The current month is at position 0, the previous months are
+	 * stored in the array at an index that matches the month index. E.g. March
+	 * would be 3
+	 * 
+	 * @return The purchase order list array
+	 */
 	public PurchaseOrderList[] getPurchaseHistory() {
 		return purchaseHistory;
 	}
 
+	/**
+	 * Adds a new customer to the customer list
+	 * 
+	 * @param details
+	 *            The new customer to add
+	 */
 	public void addNewCustomer(CustomerDetails details) {
 		customerDetailsList.add(details);
 	}
@@ -90,8 +116,7 @@ public class SportsEquipmentSupplier {
 		PurchaseOrderList tmp = purchaseHistory[currentMonth];
 		purchaseHistory[currentMonth] = purchaseHistory[0];
 		currentMonth++;
-		if (currentMonth >= 13)
-		{
+		if (currentMonth >= 13) {
 			currentMonth = 1;
 			currentYear++;
 		}

@@ -27,15 +27,21 @@ public class Address {
 		this.city = other.city;
 		this.postcode = other.postcode;
 	}
-
+	/**
+	 * @return The house number and street
+	 */
 	public String getStreet() {
 		return street;
 	}
-
+	/**
+	 * @return The city
+	 */
 	public String getCity() {
 		return city;
 	}
-
+	/**
+	 * @return The postcode
+	 */
 	public String getPostcode() {
 		return postcode;
 	}

@@ -3,7 +3,7 @@ package me.charles.programmingcw2;
 import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
 
 /**
- * A class to represent a sports club, holding its details
+ * A class to represent a sports clubs details
  * 
  * @author charles
  * 
@@ -20,6 +20,9 @@ public class SportsClubDetails extends CustomerDetails {
 		this.name = name;
 	}
 
+	/**
+	 * @return the name of the club
+	 */
 	public String getClubName() {
 		return name;
 	}
@@ -29,6 +32,12 @@ public class SportsClubDetails extends CustomerDetails {
 		return discount;
 	}
 
+	/**
+	 * Sets the discount value for this sports club
+	 * 
+	 * @param discount
+	 *            the new discount value
+	 */
 	public void setDiscount(int discount) {
 		this.discount = discount;
 	}

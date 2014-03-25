@@ -19,14 +19,26 @@ public class Product {
 		this.pricePerUnit = pricePerUnit;
 	}
 
+	/**
+	 * @return The code of the product
+	 */
 	public String getProductCode() {
 		return productCode;
 	}
 
+	/**
+	 * @return The price per unit for this product
+	 */
 	public double getPricePerUnit() {
 		return pricePerUnit;
 	}
-	
+
+	/**
+	 * Sets the price per unit for this product
+	 * 
+	 * @param pricePerUnit
+	 *            The new price per unit
+	 */
 	public void setPricePerUnit(double pricePerUnit) {
 		this.pricePerUnit = pricePerUnit;
 	}

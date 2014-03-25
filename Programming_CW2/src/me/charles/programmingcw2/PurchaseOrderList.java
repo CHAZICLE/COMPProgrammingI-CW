@@ -4,8 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * A class to represent and maintain a list of purchase orders NOTE VERY unclear
- * what exactly it wants here
+ * A class to represent and maintain a list of purchase orders
  * 
  * @author charles
  * 
@@ -21,10 +20,19 @@ public class PurchaseOrderList {
 		return purchaseOrderList.toArray(new PurchaseOrder[purchaseOrderList.size()]);
 	}
 
+	/**
+	 * Adds a new purchase order to the list
+	 * 
+	 * @param purchaseOrder
+	 *            The new purchase order
+	 */
 	public void addPurchaseOrder(PurchaseOrder purchaseOrder) {
 		purchaseOrderList.add(purchaseOrder);
 	}
 
+	/**
+	 * Clears the purchase orders from the list
+	 */
 	public void clear() {
 		purchaseOrderList.clear();
 	}

@@ -2,6 +2,12 @@ package me.charles.programmingcw2;
 
 import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
 
+/**
+ * A class to represent the details of a private customer
+ * 
+ * @author charles
+ * 
+ */
 public class PrivateCustomerDetails extends CustomerDetails {
 	private Name name;
 	private static final int COMPANY_SPECIFIED_DISCOUNT_VALUE = 100;
@@ -13,16 +19,21 @@ public class PrivateCustomerDetails extends CustomerDetails {
 		this.name = name;
 	}
 
+	/**
+	 * @return The name of the private customer
+	 */
 	public Name getName() {
 		return name;
 	}
 
+	/**
+	 * Changes the name of the private customer
+	 * 
+	 * @param name
+	 *            The new name
+	 */
 	public void setName(Name name) {
 		this.name = name;
-	}
-
-	public static int getCompanyDiscountValue() {
-		return COMPANY_SPECIFIED_DISCOUNT_VALUE;
 	}
 
 	/**

@@ -17,30 +17,51 @@ public class PurchaseOrder {
 		customerDiscount = customer.getDiscount();
 	}
 
+	/**
+	 * @return the date that this order was made
+	 */
 	public OrderDate getDateOrdered() {
 		return orderDate;
 	}
 
+	/**
+	 * @return The customer ID associated with this order
+	 */
 	public String getCustomerID() {
 		return customerID;
 	}
 
+	/**
+	 * @return the cached discount value
+	 */
 	public int getCustomerDiscount() {
 		return customerDiscount;
 	}
 
+	/**
+	 * @return the product that was ordered
+	 */
 	public Product getProduct() {
 		return product;
 	}
 
+	/**
+	 * @return the quantity of the product that was ordered
+	 */
 	public int getQuantity() {
 		return quantity;
 	}
 
+	/**
+	 * @return the final calculated price after the discount has been taken
+	 */
 	public double getDiscountedPrice() {
-		return (product.getPricePerUnit() * quantity * (100 - getCustomerDiscount())) / 100;
+		return (getFullPrice() * (100 - getCustomerDiscount())) / 100;
 	}
 
+	/**
+	 * @return the full price of this order without the discount
+	 */
 	public double getFullPrice() {
 		return product.getPricePerUnit() * quantity;
 	}

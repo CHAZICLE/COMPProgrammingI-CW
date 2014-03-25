@@ -7,6 +7,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
+/**
+ * A file line iterator
+ * 
+ * @author charles
+ * 
+ */
 public class InputFileData implements Closeable, Iterable<String>, Iterator<String> {
 	private BufferedReader br;
 

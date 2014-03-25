@@ -24,6 +24,7 @@ public class CustomerDetailsList implements Iterable<CustomerDetails> {
 	public void add(CustomerDetails customerDetails) {
 		detailsCache.put(customerDetails.getCustomerID(), customerDetails);
 	}
+
 	/**
 	 * @return The number of customers in this list
 	 */
