@@ -17,7 +17,7 @@ public class SportsEquipmentDemo {
 				String[] codes = fir.next().split("#");
 				String[] pricesPerUnit = fir.next().split("#");
 				for (int i = 0; i < count; i++) {
-					tempProducts.add(new Product(codes[i], (int) (100 * Double.parseDouble(pricesPerUnit[i]))));
+					tempProducts.add(new Product(codes[i], Double.parseDouble(pricesPerUnit[i])));
 				}
 			} catch (Exception e) {
 				System.err.println("Error reading product data");
@@ -74,7 +74,7 @@ public class SportsEquipmentDemo {
 				} catch (NumberFormatException | IncorrectPurchaseOrderException | CustomerNotFoundException e) {
 					System.err.println("Error purchasing product");
 					e.printStackTrace();
-					// System.exit(1);
+					System.exit(1);
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -85,7 +85,7 @@ public class SportsEquipmentDemo {
 
 	@Override
 	public String toString() {
-		// This is just getting silly
+		// This is just silly, but it did say you need StringBuilders
 		return new StringBuffer().append("SportsEquipmentDemo").toString();
 	}
 }

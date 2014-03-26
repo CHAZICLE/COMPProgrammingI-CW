@@ -10,7 +10,7 @@ import java.util.List;
  * 
  */
 public class PurchaseOrderList {
-	private List<PurchaseOrder> purchaseOrderList = new LinkedList<>();
+	private List<PurchaseOrder> purchaseOrderList = new LinkedList<PurchaseOrder>();
 
 	/**
 	 * @return an array containing all the purchase orders in this list, if this

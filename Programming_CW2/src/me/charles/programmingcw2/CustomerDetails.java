@@ -33,7 +33,7 @@ public abstract class CustomerDetails {
 	 */
 	public CustomerDetails(String customerID, Address address, String regionalCode, double totalFullPriceValue) throws IllegalCustomerIDException {
 		// General validation of customerID
-		if (!customerID.matches("[A-Z]{3}-[0-9]{4}"))
+		if (!customerID.matches("^[A-Z]{3}-[0-9]{4}$"))
 			throw new IllegalCustomerIDException("Customer IDs must be aaa-dddd, where a is a letter and d is a numerical digit");
 		if (!validRegionCodes.contains(customerID.substring(1, 3)))
 			throw new IllegalCustomerIDException("Unknown region code!");

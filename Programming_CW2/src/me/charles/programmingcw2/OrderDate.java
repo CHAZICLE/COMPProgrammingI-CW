@@ -27,11 +27,27 @@ public class OrderDate {
 	public OrderDate(String date) throws IllegalDateFormatException {
 		if (!date.matches("[0-9]{2}/[0-9]{2}/[0-9]{2}"))
 			throw new IllegalDateFormatException("Date must be in format dd/mm/yy");
-		try {
-			dateFormat.parse(date);
-		} catch (ParseException e) {
-			throw new IllegalDateFormatException("Invalid date");
+		String[] dateParams = date.split("/");
+		int day = Integer.parseInt(dateParams[0]);
+		int month = Integer.parseInt(dateParams[1]);
+		int year = Integer.parseInt(dateParams[2]);
+		if(month>12 || month<=0)
+			throw new IllegalDateFormatException("Invalid month");
+		int monthDays = 31;
+		switch(month)
+		{
+		case 9://Sep
+		case 4://Apr
+		case 6://Jun
+		case 11://Nov
+			monthDays = 30;
+			break;
+		case 2://Feb
+			monthDays = (year%4==0 && year%100!=0 || year%400==0) ? 29 : 28;
+			break;
 		}
+		if(day>monthDays)
+			throw new IllegalDateFormatException("There arn't that many days in that month");
 		this.date = date;
 	}
 

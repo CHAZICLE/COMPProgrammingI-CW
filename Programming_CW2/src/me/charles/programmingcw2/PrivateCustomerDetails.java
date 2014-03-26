@@ -10,7 +10,7 @@ import me.charles.programmingcw2.exceptions.IllegalCustomerIDException;
  */
 public class PrivateCustomerDetails extends CustomerDetails {
 	private Name name;
-	private static final int COMPANY_SPECIFIED_DISCOUNT_VALUE = 100;
+	private static final int COMPANY_SPECIFIED_DISCOUNT_VALUE = 500;
 
 	public PrivateCustomerDetails(String customerID, Name name, Address address, String regionalCode, double totalFullPriceValue) throws IllegalCustomerIDException {
 		super(customerID, address, regionalCode, totalFullPriceValue);
